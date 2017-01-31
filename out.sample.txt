@@ -1,0 +1,14 @@
+FPGrowth and Association Rules generation with {
+  input:	transactions.sample.csv,
+  minSupport:	0.3,
+  minConfidence:	0.7,
+  numPartitions:	1
+}
+Number of transactions: 5
+Number of frequent itemsets: 4
+[butter], 2
+[milk], 2
+[milk,bread], 2
+[bread], 3
+Association Rules:
+[milk] => [bread], 1.0
