@@ -6,7 +6,9 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Affinity_analysis):
 ## Simple usage
 
 ### Create a transactions.csv file
-Your transactions (old orders of customers) should be specified in CSV format, in which each line represent a single transaction (order).
+A transaction is the set of items bought in a single order by a customer of your shop.
+
+Your transactions history (list of all the orders of all the customers of your shop) should be specified in CSV format, in which each line represent a single transaction.
 
 Example:
 ```
