@@ -31,21 +31,15 @@ Clone this repo and then:
 ```
 git clone https://github.com/lorenzo-ange/spark-fpgrowth.git
 cd spark-fpgrowth
-./spark-2.1.0-bin-hadoop2.7/bin/spark-submit --class "FPGrowth" --master local[*] fpgrowth-assembly-1.0.jar <TRANSACTIONS_CSV_PATH> > <OUTPUT_FILE>
-```
-
-Using the command above you will use the default values for minSupport (0.3) and minConfidence (0.7), this configuration won't be the best for your dataset.
-
-I recommend to see the next sections of this README and tune these values to have accurate results.
-```
 ./spark-2.1.0-bin-hadoop2.7/bin/spark-submit --class "FPGrowth" --master local[*] fpgrowth-assembly-1.0.jar \
   --minSupport <MIN_SUPPORT> \
   --minConfidence <MIN_CONFIDENCE> \
   <TRANSACTIONS_CSV_PATH> > <OUTPUT_FILE>
 ```
+I recommend seeing the next sections of this README and tune these values to have accurate results.
 
 ### Output
-The output will be something like this:
+The output file will contain something like this:
 ```
 FPGrowth and Association Rules generation with {
   input:	transactions.sample.csv,
@@ -64,6 +58,7 @@ Association Rules:
 ```
 
 The number next to each frequent itemset is the number of times it has been found in the dataset.
+
 The number next to each association rule is the confidence of the rule.
 
 ## Minimum Support
@@ -89,7 +84,7 @@ Itemset [milk,bread] will have support 2/5 = 0.4 because appears 2 times in a DB
 Source: [Wikipedia](https://en.wikipedia.org/wiki/Association_rule_learning#Support)
 
 ## Minimum Confidence
-Confidence is is a value between 0 and 1 indicating how often an association rule has been found to be true.
+Confidence is a value between 0 and 1 indicating how often an association rule has been found to be true.
 
 Minimum Confidence is the treshold value used to discriminate between 'strong' and 'weak' rules.
 
