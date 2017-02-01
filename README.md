@@ -29,7 +29,7 @@ Or, more realistic, with product ids:
 ### Generate frequent itemsets and association rules
 Clone this repo and then:
 ```
-git clone https://github.com/lorenzo-ange/spark-fpgrowth.git
+git clone https://github.com/lorenzo-ange/spark-simple-mba.git
 cd spark-fpgrowth
 ./spark-2.1.0-bin-hadoop2.7/bin/spark-submit --class "FPGrowth" --master local[*] fpgrowth-assembly-1.0.jar \
   --minSupport <MIN_SUPPORT> \
