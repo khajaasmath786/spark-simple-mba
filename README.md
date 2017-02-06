@@ -38,7 +38,7 @@ cd spark-simple-mba
   --minConfidence <MIN_CONFIDENCE> \
   <TRANSACTIONS_CSV_PATH> > <OUTPUT_FILE>
 ```
-I recommend seeing the next sections of this README and tune these values to have accurate results.
+I recommend seeing the next sections of this README and tune **minSupport** and **minConfidence** values to have accurate results.
 
 ### Output
 The output file will contain something like this:
@@ -59,12 +59,12 @@ Association Rules:
 [milk] => [bread], 1.0
 ```
 
-The number next to each frequent itemset is the number of times it has been found in the dataset.
+The number next to each frequent itemset is the number of times it has been found in transactions dataset.
 
 The number next to each association rule is the confidence of the rule.
 
 ## Minimum Support
-Support is a value between 0 and 1 indicating how frequently an itemset appears in the DB.
+Support is a value between 0 and 1 indicating how frequently an itemset appears in the transactions dataset.
 
 Minimum Support is the treshold value used to discriminate between 'frequent' and 'infrequent' itemsets.
 
